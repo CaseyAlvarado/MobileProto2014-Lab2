@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FragmentedProg</string>
+    <string name="hello_world">Hello world! This is cool Chat Box. </string>
+    <string name="action_settings">Settings</string>
+
+</resources>
