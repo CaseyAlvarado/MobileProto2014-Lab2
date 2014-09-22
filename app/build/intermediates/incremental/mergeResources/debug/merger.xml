@@ -83,6 +83,11 @@
                 path="/home/casey/AndroidProto/AndroidStudioProjects/FragmentedProg/app/src/main/res/layout/textbox.xml"
                 qualifiers=""
                 type="layout" />
+            <file
+                name="chat_item"
+                path="/home/casey/AndroidProto/AndroidStudioProjects/FragmentedProg/app/src/main/res/layout/chat_item.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/home/casey/AndroidProto/AndroidStudioProjects/FragmentedProg/app/build/generated/res/rs/debug" />
         <source path="/home/casey/AndroidProto/AndroidStudioProjects/FragmentedProg/app/build/generated/res/generated/debug" />

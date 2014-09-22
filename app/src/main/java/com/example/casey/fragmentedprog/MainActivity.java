@@ -1,12 +1,15 @@
 package com.example.casey.fragmentedprog;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
 public class MainActivity extends Activity {
+
+    public static Handler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +20,13 @@ public class MainActivity extends Activity {
                     .add(R.id.container, new MyFragment())
                     .commit();
         }
+
+        dbHandler = new Handler(this);
+
+
     }
+
+
 
 
     @Override
