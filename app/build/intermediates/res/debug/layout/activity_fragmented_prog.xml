@@ -5,4 +5,4 @@
     android:layout_height="match_parent"
     tools:context=".FragmentedProg"
     tools:ignore="MergeRootFrame" />
-<!-- From: file:/home/casey/AndroidProto/AndroidStudioProjects/FragmentedProg/app/src/main/res/layout/activity_fragmented_prog.xml -->
+<!-- From: file:/home/casey/AndroidProto/FragmentedProg/app/src/main/res/layout/activity_fragmented_prog.xml -->

@@ -2,10 +2,10 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="/home/casey/AndroidProto/AndroidStudioProjects/FragmentedProg/app/src/main/assets" />
+        <source path="/home/casey/AndroidProto/FragmentedProg/app/src/main/assets" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/home/casey/AndroidProto/AndroidStudioProjects/FragmentedProg/app/src/debug/assets" />
+        <source path="/home/casey/AndroidProto/FragmentedProg/app/src/debug/assets" />
     </dataSet>
 
 </merger>

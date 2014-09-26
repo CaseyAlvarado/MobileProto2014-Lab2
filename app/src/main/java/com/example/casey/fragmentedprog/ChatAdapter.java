@@ -47,7 +47,7 @@ public class ChatAdapter extends ArrayAdapter<ChatObject>{
             /// = inflater.inflate(R.layout.chat_item, parent, false);
 
             viewHolder = new ViewHolder();
-            Log.d("text",chat.get(position).message);
+            //Log.d("text",chat.get(position).message);
             viewHolder.message = (TextView) convertView.findViewById(R.id.chat_text_view);
             viewHolder.timestamp = (TextView) convertView.findViewById(R.id.timestamp);
             viewHolder.userId = (TextView) convertView.findViewById(R.id.username);

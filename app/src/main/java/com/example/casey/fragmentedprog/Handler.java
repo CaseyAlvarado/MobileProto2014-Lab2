@@ -13,9 +13,10 @@ package com.example.casey.fragmentedprog;
         import java.util.ArrayList;
 
 /**
- * Created by chris on 12/23/13.
+ * Created by Casey on whatever date
  */
 public class Handler {
+
      //Database Model
     private Database model;
 
@@ -48,7 +49,7 @@ public class Handler {
         //values.put(Database.KITTY_STATUS, "N/A");
         //values.put(Database.KITTY_IMAGE, image);
         //database.insertWithOnConflict(Database.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_IGNORE);
-        database.insertWithOnConflict(Database.TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_IGNORE);
+        database.insert(Database.TABLE_NAME, null, values);
         //insert(Database.TABLE_NAME, null, values);
 
         //database.insert(Database.TABLE_NAME, null, values);

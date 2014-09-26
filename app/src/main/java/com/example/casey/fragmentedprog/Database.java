@@ -37,10 +37,10 @@ public final class Database extends SQLiteOpenHelper{
 
     // Database creation sql statement
     private static final String DATABASE_CREATE = "create table "
-            + TABLE_NAME
-            + USERNAME
+            + TABLE_NAME + "("
+            + USERNAME + " TEXT NOT NULL, "
             + MESSAGE + " TEXT NOT NULL UNIQUE, "
-            + TIME + "TEXT NOT NULL UNIQUE";
+            + TIME + " TEXT NOT NULL UNIQUE ";
     //delete database
     private static final String DATABASE_DELETE = "DROP TABLE IF EXISTS";
 

@@ -22,6 +22,7 @@ public class MainActivity extends Activity {
         }
 
         dbHandler = new Handler(this);
+        dbHandler.open();
 
 
     }
