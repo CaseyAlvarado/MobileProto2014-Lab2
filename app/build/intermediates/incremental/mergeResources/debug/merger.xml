@@ -14,11 +14,6 @@
                 qualifiers=""
                 type="layout" />
             <file
-                name="prompt"
-                path="/home/casey/AndroidProto/FragmentedProg/app/src/main/res/layout/prompt.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="chat_item"
                 path="/home/casey/AndroidProto/FragmentedProg/app/src/main/res/layout/chat_item.xml"
                 qualifiers=""

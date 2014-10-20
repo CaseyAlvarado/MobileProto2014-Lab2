@@ -16,7 +16,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -39,7 +47,7 @@ public class MyFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        Log.d("New Insert", "I just want to know where my code ends");
         //instantiate a chat object to put value, name, and time in
 
         final AlertDialog.Builder alert = new AlertDialog.Builder(context);
@@ -64,6 +72,11 @@ public class MyFragment extends Fragment{
             }
         });
         alert.show();
+
+
+        //final Firebase myFirebaseRef = new Firebase("https://chatty-ducks.firebaseio.com/");
+        Firebase.setAndroidContext(context);
+        final Firebase myFirebaseRef = new Firebase("https://mobileproto2014.firebaseio.com/chatroom/0");
 
 
         //instantiate my Database class
@@ -102,14 +115,54 @@ public class MyFragment extends Fragment{
                 //ChatObject chat = new ChatObject(value, "Kai");
                 ChatObject chat = new ChatObject(value, userId, String.valueOf(System.currentTimeMillis()));
                 listChats.add(chat);
-                MainActivity.dbHandler.addToDatabase(chat);
 
+                //adding chats to local database
+                MainActivity.dbHandler.addToDatabase(chat);
+                //myFirebaseRef.child("message").setValue(chat);
                 //Log.d("six", listChats.get(listChats.size()-1).message);
+
+                Firebase postRef = myFirebaseRef;
+
+                Map<String, String> post1 = new HashMap<String, String>();
+                post1.put("username", chat.sender);
+                post1.put("message", chat.message);
+                post1.put("timestamp", chat.timestamp);
+                postRef.push().setValue(post1);
+
+
+                //clear message
                 text.setText("");
                 chatAdapter.notifyDataSetChanged();
 
             }
         });
+
+        myFirebaseRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                try {
+                    Log.d("Chats from firebase", dataSnapshot.getValue().toString());
+                    //ChatObject chat = new ChatObject(null, null, null);
+                    ChatObject chat = new ChatObject(dataSnapshot.child("username").getValue().toString(), dataSnapshot.child("message").getValue().toString(), dataSnapshot.child("time").getValue().toString());
+                    //chat.message = dataSnapshot.child("message").getValue().toString();
+                    //chat.sender = dataSnapshot.child("username").getValue().toString();
+                    //chat.timestamp = dataSnapshot.child("timestamp").getValue().toString();
+                    listChats.add(chat);
+                    MainActivity.dbHandler.addToDatabase(chat);
+                    chatAdapter.notifyDataSetChanged();
+                } catch (Exception E) {
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+
 
         return rootView;
     }

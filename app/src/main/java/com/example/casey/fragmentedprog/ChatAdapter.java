@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.firebase.client.Firebase;
+
 import org.w3c.dom.Text;
 
 import java.util.List;
@@ -24,6 +26,7 @@ public class ChatAdapter extends ArrayAdapter<ChatObject>{
 
     public ChatAdapter(Context context, int resource, List<ChatObject> objects) {
         super(context, resource, objects);
+        Firebase myFirebaseRef = new Firebase("https://chatty-ducks.firebaseio.com/");
         this.context = context;
         this.resource = resource;
         this.chat = objects;
@@ -56,9 +59,13 @@ public class ChatAdapter extends ArrayAdapter<ChatObject>{
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
        }
-        viewHolder.userId.setText(chat.get(position).userId);
-        viewHolder.message.setText(chat.get(position).message);
-        viewHolder.timestamp.setText(chat.get(position).time);
+        //viewHolder.userId.setText(chat.get(position).userId);
+        viewHolder.userId.setText(chat.get(position).getSender());
+        viewHolder.message.setText(chat.get(position).getMessage());
+        viewHolder.timestamp.setText(chat.get(position).getTimestamp());
+//        viewHolder.userId.setText();
+//        viewHolder.message.setText(chat.get(position).message);
+//        viewHolder.timestamp.setText(chat.get(position).time);
 
         return convertView;
     }

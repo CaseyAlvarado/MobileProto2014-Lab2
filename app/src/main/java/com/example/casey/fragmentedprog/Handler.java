@@ -41,9 +41,9 @@ public class Handler {
     public void addToDatabase(ChatObject chat){
         ContentValues values = new ContentValues();
         //values.put(Database.KITTY_URL, url);
-        values.put(Database.USERNAME, chat.userId);
-        values.put(Database.MESSAGE, chat.message);
-        values.put(Database.TIME, chat.time);
+        values.put(Database.USERNAME, chat.getSender());
+        values.put(Database.MESSAGE, chat.getMessage());
+        values.put(Database.TIME, chat.getTimestamp());
 
         //values.put(Database.KITTY_CATEGORY, cat);
         //values.put(Database.KITTY_STATUS, "N/A");

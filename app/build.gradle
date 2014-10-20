@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 20
-    buildToolsVersion "20.0.0"
+    buildToolsVersion '20.0.0'
 
     defaultConfig {
         applicationId "com.example.casey.fragmentedprog"
@@ -17,8 +17,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
 }
 
+
+
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // NOTE: Version must match!
+    compile files('libs/firebase-simple-login-1.4.1.jar')
+    compile files('libs/firebase-client-jvm-1.0.16.jar')
+    compile 'com.firebase:firebase-client-android:1.1.1+'
 }
