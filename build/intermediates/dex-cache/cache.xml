@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/casey/AndroidProto/FragmentedProg/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-a6e55ac266abd89697d564fd2cfb59a72e04bd60.jar"
+        jar="/home/casey/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b"/>
+    <item
+        dex="/home/casey/AndroidProto/FragmentedProg/app/build/intermediates/pre-dexed/debug/firebase-client-android-1.1.1-2cf160ea84abcf76641ae0cb8ac8dcd9704c8ba0.jar"
+        jar="/home/casey/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/1.1.1/55312fdeb0b1db91c107c6679d7cf7b347515d50/firebase-client-android-1.1.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="55312fdeb0b1db91c107c6679d7cf7b347515d50"/>
+    <item
+        dex="/home/casey/AndroidProto/FragmentedProg/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-3d9787f350c92f294df90aee3216d9c4109d5a95.jar"
+        jar="/home/casey/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113"/>
+    <item
+        dex="/home/casey/AndroidProto/FragmentedProg/app/build/intermediates/pre-dexed/debug/tubesock-0.0.9-39ecca51f374f0a6b4e0be4f2b512f938eb7b6d3.jar"
+        jar="/home/casey/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.9/c1f56c0f1a75ced73ad50c47fb3f702009e3960a/tubesock-0.0.9.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="c1f56c0f1a75ced73ad50c47fb3f702009e3960a"/>
+    <item
+        dex="/home/casey/AndroidProto/FragmentedProg/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-89fff5c3b65ad4bfe199604ff3096819a81246b6.jar"
+        jar="/home/casey/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6"/>
+    <item
+        dex="/home/casey/AndroidProto/FragmentedProg/app/build/intermediates/pre-dexed/debug/firebase-client-jvm-1.1.1-4ca54699687c39a1806f30df62790422c9ee7d18.jar"
+        jar="/home/casey/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/1.1.1/54eb629aa229b4758345c02bfa02eb8306c750da/firebase-client-jvm-1.1.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="54eb629aa229b4758345c02bfa02eb8306c750da"/>
+
+</pre-dex-items>
